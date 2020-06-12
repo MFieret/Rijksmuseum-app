@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheet2.css">
+  <script src="script.js" async></script>
+  <title>Memory-Game-Rijksmuseum</title>
+</head>
+<body>
+  <div class="container-fluid no-padding">
+    <div id="banner-row" class="row">
+      <div class="col-md-12">
+        <img src="Assets\Images\r-banner.png" alt="placeholder 960" height="250px" class="img-responsive" />
+      </div>
+    </div>
+  </div>
+  <h1 class="page-title">Memory</h1> 
+  <div class="overlay-text visible">
+    Click to Start
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    VICTORY
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/lLBt3A_KvwwyN7PKHJ5E8sh83JutkmQRxY928TtSVSsJ4xJ3K5RNd0bRmyTTYmIqTx3Tqtew1QvGsY_SN9PoYlQKv2E=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/lLBt3A_KvwwyN7PKHJ5E8sh83JutkmQRxY928TtSVSsJ4xJ3K5RNd0bRmyTTYmIqTx3Tqtew1QvGsY_SN9PoYlQKv2E=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/PVn4qjK-mOcy5iU0rMpwfb_NUxr0WQiy7Ab25pLU7bb4ME4F0wyIfS0LLb8brRG2-qRbhFwuwODktU-QL3cUyEmuK9P1=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/PVn4qjK-mOcy5iU0rMpwfb_NUxr0WQiy7Ab25pLU7bb4ME4F0wyIfS0LLb8brRG2-qRbhFwuwODktU-QL3cUyEmuK9P1=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/pHegPebeJZxQEILBEoIUttnlMRncr4AJtiW3Mi1qSv3PoJFEYm_rE8pddodyBFktM3owUUg70G3z_WwfUxA7rke_xg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/pHegPebeJZxQEILBEoIUttnlMRncr4AJtiW3Mi1qSv3PoJFEYm_rE8pddodyBFktM3owUUg70G3z_WwfUxA7rke_xg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/-puHtaElxzr8J1YUryL2v2u-1fymmv7vX1uA16MhHr25KzPzoR-vK-ltx_H_afeqGJ3NCVqAvcbtpGE85oKI9Em2BAg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/-puHtaElxzr8J1YUryL2v2u-1fymmv7vX1uA16MhHr25KzPzoR-vK-ltx_H_afeqGJ3NCVqAvcbtpGE85oKI9Em2BAg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/sB8bcd5NQmryNNIZ3-xb27VMtsohrhjMxm3HZMX-ajffrWUyKh7WoBzOik5k3rc-8XNzmDrpNfyErwrsbN2bs2o63EQ=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/sB8bcd5NQmryNNIZ3-xb27VMtsohrhjMxm3HZMX-ajffrWUyKh7WoBzOik5k3rc-8XNzmDrpNfyErwrsbN2bs2o63EQ=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/BMnjenYuuSThrcbfY6PUpMu9c3ZPSutlBfw3dIBt66Y6HcRvWD-LsMNIeGpcH4pVhaDlEEwmtOwYMc_Re41dCNkIXTA=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/BMnjenYuuSThrcbfY6PUpMu9c3ZPSutlBfw3dIBt66Y6HcRvWD-LsMNIeGpcH4pVhaDlEEwmtOwYMc_Re41dCNkIXTA=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/4grKP_pusgY7bz3JEGhb3CXoCa9cBnwOcSphxkqr1P41pbyudgW_A3M7r72GZFdSoL5nIKJiifyOMHLV8SBtSvAFYA=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/4grKP_pusgY7bz3JEGhb3CXoCa9cBnwOcSphxkqr1P41pbyudgW_A3M7r72GZFdSoL5nIKJiifyOMHLV8SBtSvAFYA=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/eRiEjKiw3vlkyqAhBHibW69hHQcRnRx6LMFrIHcseNr_IIoqShM4gZKXVE8BoilYkE0Ic7_Qnf_X8SRfYPabQTdSYw=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/eRiEjKiw3vlkyqAhBHibW69hHQcRnRx6LMFrIHcseNr_IIoqShM4gZKXVE8BoilYkE0Ic7_Qnf_X8SRfYPabQTdSYw=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/p7rYA1QO1MMRhLxRBIgjxaLN8FFARufjCuyjeZ46NC76oqOsj30SChhDyViYWoEmsQvdksUaExRNqXwFlutOeWTG2zQ=s0">
+      </div>
+    </div>
+    <div class="card">
+      <div class="backside-card card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-unknown" src="Assets/Images/Schilderij-achterkant.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="picture-frame" src="Assets/Images/Lijst-schilderij.png">
+        <img class="picture-known" src="https://lh3.googleusercontent.com/p7rYA1QO1MMRhLxRBIgjxaLN8FFARufjCuyjeZ46NC76oqOsj30SChhDyViYWoEmsQvdksUaExRNqXwFlutOeWTG2zQ=s0">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

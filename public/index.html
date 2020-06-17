@@ -1,203 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <script src="js/script.js" async></script>
-  <title>Memory-Game-Rijksmuseum</title>
-</head>
-<body>
-  <div class="container-fluid no-padding">
-    <div id="banner-row" class="row">
-      <div class="col-md-12">
-        <img src="graphics/r-banner.png" alt="placeholder 960" height="250px" class="img-responsive" />
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet1.css">
+  </head>
+  <body>
+    <div class="container-fluid no-padding">
+      <div id="banner-row" class="row">
+        <div class="col-md-12">
+          <img src="Assets\r-banner.png" alt="placeholder 960" height="250px" class="img-responsive" />
+        </div>
       </div>
     </div>
-  </div>
-  <h1 class="page-title">Memory</h1> 
-  <div class="overlay-text visible">
-    Click to Start
-  </div>
-  <div id="game-over-text" class="overlay-text">
-    GAME OVER
-    <span class="overlay-text-small">Click to Restart</span>
-  </div>
-  <div id="victory-text" class="overlay-text">
-    VICTORY
-    <span class="overlay-text-small">Click to Restart</span>
-  </div>
-  <div class="game-container">
-    <div class="game-info-container">
-      <div class="game-info">
-        Time <span id="time-remaining">100</span>
-      </div>
-      <div class="game-info">
-        Flips <span id="flips">0</span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics//Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-1.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-1.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-2.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-2.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-3.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-3.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-4.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-4.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-5.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-5.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-6.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-6.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics//Voorbeeld-7.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-7.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-8.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="backside-card card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-unknown" src="graphics/Schilderij-achterkant.png">
-      </div>
-      <div class="card-front card-face">
-        <img class="picture-frame" src="graphics/Lijst-schilderij.png">
-        <img class="picture-known" src="graphics/Voorbeeld-8.png">
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<form class="box" d="post">
+  <h1>Choose Artist</h1>
+  <input type="button" onClick="location.href='rvr-difficulty.html';" value="Rembrandt van Rijn">
+  <input type="button" onClick="location.href='jm-difficulty.html';" value="Jacob Maris">
+  <input type="button" onClick="location.href='ghb-difficulty.html';" value="George Hendrik Breitner">
+</form>    
+  </body>
+  </html>

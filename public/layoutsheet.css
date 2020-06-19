@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding:10px;
+    text-align: center;
+
+}
+
+header{
+    padding:20px;
+    background-image: url();
+    border-radius: 20px;
+    background-color: #cccccc;
+}
+
+section{
+    width: 50%;
+    float: left;
+    height: 400px;
+    background: grey;
+}
+
+.second{
+    width:50%;
+    float: left;
+    height: 400px;
+    background:red;
+    border-left:2px solid white;
+}
+
+.main{
+    margin: 10px 0px;
+}

@@ -1,19 +1,19 @@
-class AudioController {
+class AudioControl {
   constructor() {
-      this.bgMusic = new Audio('Assets/Audio/background-music.mp3');
+      this.backgroundMusic = new Audio('Assets/Audio/background-music.mp3');
       this.flipSound = new Audio('Assets/Audio/flip.wav');
       this.matchSound = new Audio('Assets/Audio/match.wav');
       this.victorySound = new Audio('Assets/Audio/victory.wav');
       this.gameOverSound = new Audio('Assets/Audio/gameOver.wav');
-      this.bgMusic.volume = 0.5;
-      this.bgMusic.loop = true;
+      this.backgroundMusic.volume = 0.2;
+      this.backgroundMusic.loop = true;
   }
   startMusic() {
-      this.bgMusic.play();
+      this.backgroundMusic.play();
   }
   stopMusic() {
-      this.bgMusic.pause();
-      this.bgMusic.currentTime = 0;
+      this.backgroundMusic.pause();
+      this.backgroundMusic.currentTime = 0;
   }
   flip() {
       this.flipSound.play();
@@ -33,12 +33,12 @@ class AudioController {
 
 class Memory {
   constructor(totalTime, cards) {
-      this.cardsArray = cards;
+      this.cardArray = cards;
       this.totalTime = totalTime;
       this.timeRemaining = totalTime;
       this.timer = document.getElementById('time-remaining')
       this.ticker = document.getElementById('flips');
-      this.audioController = new AudioController();
+      this.audioControl = new AudioControl();
   }
 
   startGame() {
@@ -48,8 +48,8 @@ class Memory {
       this.matchedCards = [];
       this.busy = true;
       setTimeout(() => {
-          this.audioController.startMusic();
-          this.shuffleCards(this.cardsArray);
+          this.audioControl.startMusic();
+          this.shuffleCards(this.cardArray);
           this.countdown = this.startCountdown();
           this.busy = false;
       }, 500)
@@ -67,23 +67,23 @@ class Memory {
   }
   gameOver() {
       clearInterval(this.countdown);
-      this.audioController.gameOver();
+      this.audioControl.gameOver();
       document.getElementById('game-over-text').classList.add('visible');
   }
   victory() {
       clearInterval(this.countdown);
-      this.audioController.victory();
+      this.audioControl.victory();
       document.getElementById('victory-text').classList.add('visible');
   }
   hideCards() {
-      this.cardsArray.forEach(card => {
+      this.cardArray.forEach(card => {
           card.classList.remove('visible');
           card.classList.remove('matched');
       });
   }
   flipCard(card) {
       if(this.canFlipCard(card)) {
-          this.audioController.flip();
+          this.audioControl.flip();
           this.totalClicks++;
           this.ticker.innerText = this.totalClicks;
           card.classList.add('visible');
@@ -99,7 +99,7 @@ class Memory {
       if(this.getCardType(card) === this.getCardType(this.cardToCheck))
           this.cardMatch(card, this.cardToCheck);
       else 
-          this.cardMismatch(card, this.cardToCheck);
+          this.cardnotMatch(card, this.cardToCheck);
 
       this.cardToCheck = null;
   }
@@ -108,11 +108,11 @@ class Memory {
       this.matchedCards.push(card2);
       card1.classList.add('matched');
       card2.classList.add('matched');
-      this.audioController.match();
-      if(this.matchedCards.length === this.cardsArray.length)
+      this.audioControl.match();
+      if(this.matchedCards.length === this.cardArray.length)
           this.victory();
   }
-  cardMismatch(card1, card2) {
+  cardnotMatch(card1, card2) {
       this.busy = true;
       setTimeout(() => {
           card1.classList.remove('visible');
@@ -120,11 +120,11 @@ class Memory {
           this.busy = false;
       }, 1000);
   }
-  shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm.
-      for (let i = cardsArray.length - 1; i > 0; i--) {
+  shuffleCards(cardArray) { // Fisher-Yates Shuffle Algorithm.
+      for (let i = cardArray.length - 1; i > 0; i--) {
           let randIndex = Math.floor(Math.random() * (i + 1));
-          cardsArray[randIndex].style.order = i;
-          cardsArray[i].style.order = randIndex;
+          cardArray[randIndex].style.order = i;
+          cardArray[i].style.order = randIndex;
       }
   }
   getCardType(card) {
